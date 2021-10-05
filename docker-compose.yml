@@ -3,10 +3,10 @@ services:
   web:
     build:
       context: ./web
-    image: pets-web:v1
+    image: somkiat/pets-web:v1
     ports:
       - 80:80
   db:
     build:
       context: ./db
-    image: pets-db:v1
+    image: somkiat/pets-db:v1
