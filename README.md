@@ -13,7 +13,9 @@ $docker-compose ps
 $docker-compose logs --follow
 ```
 
-Open url = `http://localhost` in browser
+Open urls in browser
+* REST API => http://localhost/
+* Web => http://localhost/pet
 
 ## 2. Working with Kubernetes
 ```

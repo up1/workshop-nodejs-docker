@@ -10,7 +10,7 @@ app.set('views', __dirname);
 app.use(express.static('src'));
 
 app.get('/',function(req,res){
-    res.status(200).send('Pets Demo Application');
+    res.json({ message: "Hello api with json" });
 });
 
 app.get('/pet', async function(req,res){
