@@ -18,6 +18,10 @@ spec:
       containers:
       - name: web
         image: somkiat/pets-web:v1
+        resources:
+           limits:
+             memory: "512Mi"
+             cpu: "250m"
         ports:
         - containerPort: 80
 ---

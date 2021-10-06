@@ -17,6 +17,10 @@ spec:
       containers:
       - name: db
         image: somkiat/pets-db:v1
+        resources:
+           limits:
+             memory: "1G"
+             cpu: "250m"
         ports:
         - containerPort: 5432
           name: db

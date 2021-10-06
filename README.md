@@ -22,7 +22,9 @@ Open urls in browser
 $cd k8s
 $kubectl apply -f db.yml
 $kubectl apply -f web.yml
-
 $kubectl get all
+
+$kubectl apply -f ingress.yml
+$kubectl get ingress
 ```
 
