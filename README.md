@@ -9,7 +9,11 @@ $docker-compose ps
 
 $docker-compose up -d web
 $docker-compose ps
+
+$docker-compose logs --follow
 ```
+
+Open url = `http://localhost` in browser
 
 ## 2. Working with Kubernetes
 ```

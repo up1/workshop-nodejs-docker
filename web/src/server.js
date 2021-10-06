@@ -31,7 +31,7 @@ app.get('/pet', async function(req,res){
     var result = await pool.query(sql, values);
     const url = result.rows[0].url;
     console.log(url);
-    res.render('index', {
+    res.render('pet', {
             url: url,
             hostname: os.hostname()
         });
