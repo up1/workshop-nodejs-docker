@@ -5,7 +5,10 @@ services:
       context: ./web
     image: somkiat/pets-web:v1
     ports:
-      - 80:80
+      - 8888:80
+    environment:
+      - DB_USER=xxx
+      - DB_PASWORD=xxx
   db:
     build:
       context: ./db
