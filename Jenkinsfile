@@ -1,5 +1,5 @@
 pipeline {
-    agent none
+    agent { label 'server01' }
 
     stages {
         stage('Monitor') {
@@ -9,9 +9,17 @@ pipeline {
             }
         }
 		stage('Build') {
-			agent { label 'server01' }
-            steps {
-                sh 'docker-compose build frontend'
+            parallel {
+                stage('Vue') {
+                    steps {
+                        sh 'docker-compose build frontend'
+                    }
+                }
+                stage('Node') {
+                    steps {
+                        sh 'docker-compose build web'
+                    }
+                }
             }
         }
 		stage('Push') {
