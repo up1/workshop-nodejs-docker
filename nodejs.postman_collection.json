@@ -1,0 +1,47 @@
+{
+	"info": {
+		"_postman_id": "c9b8a3ef-8495-43b3-946a-315af8b8195c",
+		"name": "nodejs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://157.245.151.107:9999/",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "7ff0bd08-cb90-49fc-9bb3-ec1a2f034eef",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://157.245.151.107:9999/",
+					"protocol": "http",
+					"host": [
+						"157",
+						"245",
+						"151",
+						"107"
+					],
+					"port": "9999",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
