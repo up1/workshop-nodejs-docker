@@ -4,6 +4,7 @@ services:
     build:
       context: ./frontend
     image: somkiat/pets-front:v1
+    container_name: frontend
     ports:
       - 9999:80
     healthcheck:
