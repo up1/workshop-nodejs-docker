@@ -15,3 +15,10 @@ spec:
                 name: web
                 port:
                   number: 80
+          - path: /front/*
+            pathType: ImplementationSpecific
+            backend:
+              service:
+                name: frontend
+                port:
+                  number: 80
