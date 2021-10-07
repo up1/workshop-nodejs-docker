@@ -1,4 +1,4 @@
-# Step to run workshop
+# Step to run workshop ...
 
 
 ## 1. Working with Docker
