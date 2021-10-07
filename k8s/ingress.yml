@@ -8,14 +8,14 @@ spec:
   rules:
     - http:
         paths:
+          # - path: /*
+          #   pathType: ImplementationSpecific
+          #   backend:
+          #     service:
+          #       name: web
+          #       port:
+          #         number: 80
           - path: /*
-            pathType: ImplementationSpecific
-            backend:
-              service:
-                name: web
-                port:
-                  number: 80
-          - path: /front/*
             pathType: ImplementationSpecific
             backend:
               service:
