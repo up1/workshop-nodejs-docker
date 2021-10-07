@@ -1,5 +1,11 @@
 version: "3"
 services:
+  frontend:
+    build:
+      context: ./frontend
+    image: somkiat/pets-front:v1
+    ports:
+      - 9999:80
   web:
     build:
       context: ./web
