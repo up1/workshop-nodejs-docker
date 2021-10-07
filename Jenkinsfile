@@ -31,8 +31,9 @@ pipeline {
             }
         }
 		stage('Testing') {
+            agent { label 'server01' }
             steps {
-                echo 'Testing'
+                sh 'newman run nodejs.postman_collection.json'
             }
         }
     }
