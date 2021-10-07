@@ -25,6 +25,7 @@ pipeline {
             }
         }
 		stage('Deploy') {
+            agent { label 'server01' }
             steps {
                 sh 'sh deploy.sh'
             }
