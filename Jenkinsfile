@@ -33,8 +33,14 @@ pipeline {
 		stage('Testing') {
             agent { label 'server01' }
             steps {
-                sh 'newman run nodejs.postman_collection.json'
+                sh '''rm -rf newman/
+                      newman run nodejs.postman_collection.json --reporters junit,cli'''
             }
+            post { 
+                always { 
+                    junit 'newman/*.xml'
+                }
+    }
         }
     }
 }
